@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace UAV_TOOL
 {
     public static class WilfFile
@@ -174,6 +175,20 @@ namespace UAV_TOOL
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 return ofd.FileName;                           
+            }
+            return null;
+        }
+
+        public static string[] OpenFiles(string FileType)
+        {
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "文件|*" + FileType + "|所有文件|*.*";
+            ofd.Multiselect = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string Content = string.Empty;
+                return ofd.FileNames;
             }
             return null;
         }

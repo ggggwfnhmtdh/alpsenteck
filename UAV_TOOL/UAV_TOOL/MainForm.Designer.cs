@@ -39,15 +39,21 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOOLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mergeVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.algnHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.algnVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.FormatImageBox = new System.Windows.Forms.TextBox();
             this.MsgBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.openInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SubDirCB = new System.Windows.Forms.CheckBox();
-            this.FpsExternalCB = new System.Windows.Forms.CheckBox();
             this.ScaleBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.FpsExternalCB = new System.Windows.Forms.CheckBox();
+            this.SubDirCB = new System.Windows.Forms.CheckBox();
+            this.waterMarkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +136,8 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fILEToolStripMenuItem});
+            this.fILEToolStripMenuItem,
+            this.tOOLToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 32);
@@ -149,9 +156,57 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(209, 34);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // openInputToolStripMenuItem
+            // 
+            this.openInputToolStripMenuItem.Name = "openInputToolStripMenuItem";
+            this.openInputToolStripMenuItem.Size = new System.Drawing.Size(209, 34);
+            this.openInputToolStripMenuItem.Text = "Open Input";
+            this.openInputToolStripMenuItem.Click += new System.EventHandler(this.openInputToolStripMenuItem_Click);
+            // 
+            // tOOLToolStripMenuItem
+            // 
+            this.tOOLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mergeVideoToolStripMenuItem,
+            this.waterMarkToolStripMenuItem});
+            this.tOOLToolStripMenuItem.Name = "tOOLToolStripMenuItem";
+            this.tOOLToolStripMenuItem.Size = new System.Drawing.Size(75, 28);
+            this.tOOLToolStripMenuItem.Text = "TOOL";
+            // 
+            // mergeVideoToolStripMenuItem
+            // 
+            this.mergeVideoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.algnHToolStripMenuItem,
+            this.algnVToolStripMenuItem,
+            this.autoToolStripMenuItem});
+            this.mergeVideoToolStripMenuItem.Name = "mergeVideoToolStripMenuItem";
+            this.mergeVideoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.mergeVideoToolStripMenuItem.Text = "MergeVideo";
+            this.mergeVideoToolStripMenuItem.Click += new System.EventHandler(this.mergeVideoToolStripMenuItem_Click);
+            // 
+            // algnHToolStripMenuItem
+            // 
+            this.algnHToolStripMenuItem.Name = "algnHToolStripMenuItem";
+            this.algnHToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.algnHToolStripMenuItem.Text = "Align-X";
+            this.algnHToolStripMenuItem.Click += new System.EventHandler(this.algnHToolStripMenuItem_Click);
+            // 
+            // algnVToolStripMenuItem
+            // 
+            this.algnVToolStripMenuItem.Name = "algnVToolStripMenuItem";
+            this.algnVToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.algnVToolStripMenuItem.Text = "Align-Y";
+            this.algnVToolStripMenuItem.Click += new System.EventHandler(this.algnVToolStripMenuItem_Click);
+            // 
+            // autoToolStripMenuItem
+            // 
+            this.autoToolStripMenuItem.Name = "autoToolStripMenuItem";
+            this.autoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.autoToolStripMenuItem.Text = "Auto";
+            this.autoToolStripMenuItem.Click += new System.EventHandler(this.autoToolStripMenuItem_Click);
             // 
             // label4
             // 
@@ -203,33 +258,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Option";
             // 
-            // openInputToolStripMenuItem
-            // 
-            this.openInputToolStripMenuItem.Name = "openInputToolStripMenuItem";
-            this.openInputToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.openInputToolStripMenuItem.Text = "Open Input";
-            this.openInputToolStripMenuItem.Click += new System.EventHandler(this.openInputToolStripMenuItem_Click);
-            // 
-            // SubDirCB
-            // 
-            this.SubDirCB.AutoSize = true;
-            this.SubDirCB.Location = new System.Drawing.Point(8, 179);
-            this.SubDirCB.Name = "SubDirCB";
-            this.SubDirCB.Size = new System.Drawing.Size(142, 22);
-            this.SubDirCB.TabIndex = 11;
-            this.SubDirCB.Text = "SubDirectory";
-            this.SubDirCB.UseVisualStyleBackColor = true;
-            // 
-            // FpsExternalCB
-            // 
-            this.FpsExternalCB.AutoSize = true;
-            this.FpsExternalCB.Location = new System.Drawing.Point(174, 40);
-            this.FpsExternalCB.Name = "FpsExternalCB";
-            this.FpsExternalCB.Size = new System.Drawing.Size(106, 22);
-            this.FpsExternalCB.TabIndex = 12;
-            this.FpsExternalCB.Text = "External";
-            this.FpsExternalCB.UseVisualStyleBackColor = true;
-            // 
             // ScaleBox
             // 
             this.ScaleBox.Location = new System.Drawing.Point(286, 36);
@@ -246,6 +274,33 @@
             this.label5.Size = new System.Drawing.Size(53, 18);
             this.label5.TabIndex = 14;
             this.label5.Text = "Scale";
+            // 
+            // FpsExternalCB
+            // 
+            this.FpsExternalCB.AutoSize = true;
+            this.FpsExternalCB.Location = new System.Drawing.Point(174, 40);
+            this.FpsExternalCB.Name = "FpsExternalCB";
+            this.FpsExternalCB.Size = new System.Drawing.Size(106, 22);
+            this.FpsExternalCB.TabIndex = 12;
+            this.FpsExternalCB.Text = "External";
+            this.FpsExternalCB.UseVisualStyleBackColor = true;
+            // 
+            // SubDirCB
+            // 
+            this.SubDirCB.AutoSize = true;
+            this.SubDirCB.Location = new System.Drawing.Point(8, 179);
+            this.SubDirCB.Name = "SubDirCB";
+            this.SubDirCB.Size = new System.Drawing.Size(142, 22);
+            this.SubDirCB.TabIndex = 11;
+            this.SubDirCB.Text = "SubDirectory";
+            this.SubDirCB.UseVisualStyleBackColor = true;
+            // 
+            // waterMarkToolStripMenuItem
+            // 
+            this.waterMarkToolStripMenuItem.Name = "waterMarkToolStripMenuItem";
+            this.waterMarkToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.waterMarkToolStripMenuItem.Text = "WaterMark";
+            this.waterMarkToolStripMenuItem.Click += new System.EventHandler(this.waterMarkToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -293,6 +348,12 @@
         private System.Windows.Forms.CheckBox FpsExternalCB;
         private System.Windows.Forms.TextBox ScaleBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem tOOLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mergeVideoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem algnVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem algnHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem waterMarkToolStripMenuItem;
     }
 }
 

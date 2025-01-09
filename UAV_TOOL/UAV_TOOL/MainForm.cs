@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Runtime.InteropServices.ComTypes;
+using System.Drawing.Drawing2D;
+using UAV_TOOL.WilfClass;
 
 namespace UAV_TOOL
 {
@@ -160,12 +162,112 @@ namespace UAV_TOOL
                 ParamStr += "-pix_fmt yuv420p ";
                 ParamStr += "-vf  "+AddQuotes("scale=iw*"+width.ToString()+":ih*"+height.ToString())+" ";
                 ParamStr += "-y ";
-                ParamStr += VideoName;
+                ParamStr += AddQuotes(VideoName);
                 StartExternalProgram(ParamStr);   //ffmpeg -i input.mp4 -vf "scale=iw*1.5:ih*1.5" output.mp4
                 bmp.Dispose();
             }
         }
-       
+
+        private string GenerateMergeVideoParam(string inputFiles,string outputFile)
+        {
+            int numVideos = inputFiles.Length;
+            string ParamStr;
+           if (numVideos == 2)
+            {
+                // 横向排列两个视频  
+                ParamStr = ($"-i \"{inputFiles[0]}\" -i \"{inputFiles[1]}\" -filter_complex hstack \"{outputFile}\"");
+            }
+            else if (numVideos == 3)
+            {
+                // 垂直排列三个视频  
+                ParamStr = ($"-i \"{inputFiles[0]}\" -i \"{inputFiles[1]}\" -i \"{inputFiles[2]}\" -filter_complex \"[0:v][1:v]vstack[v12];[v12][2:v]vstack\" \"{outputFile}\"");
+            }
+            else
+            {
+                /// 对于四个以上的视频，进行 2x2 的排列  
+                string inputs = string.Join(" ", inputFiles.Select(f => $"-i \"{f}\""));
+                string filters = "";
+
+                // 构建 hstack 过滤器  
+                for (int i = 0; i < numVideos; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        filters += $"[{i}:v]";
+                    }
+                    else
+                    {
+                        filters += $"[{i}:v]hstack=inputs=2[v{(i / 2)}];";
+                    }
+                }
+
+                // 在循环后添加未处理的视频过滤器  
+                if (numVideos % 2 == 1)
+                {
+                    filters += $"[v{(numVideos / 2)}]";
+                }
+
+                filters += $"vstack=inputs={Math.Ceiling(numVideos / 2.0)}";
+
+                ParamStr = ($"{inputs} -filter_complex \"{filters}\" \"{outputFile}\"");
+            }
+            return ParamStr;
+        }
+        private void MergeVideo(string[] video_files,string Align)  //ffmpeg -i video1.mp4 -i video2.mp4 -filter_complex vstack output.mp4
+        {
+            string VideoName="";
+            string VideoFullName = "";
+            string SaveDir = Application.StartupPath + "\\MergeVideo";
+            string DirName;
+            string ParamStr = "";
+            string HV = "";
+            WilfFile.CreateDirectory(SaveDir);
+
+            
+            if (video_files.Length>1)
+            {
+
+                DirName = Path.GetFileName(Path.GetDirectoryName(video_files[0]));
+                SaveDir += "\\"+DirName;
+                for (int i = 0; i < video_files.Length; i++)
+                {
+                    VideoName += Path.GetFileNameWithoutExtension(video_files[i])+"_";
+                }
+                VideoName = VideoName.Trim('_')+Path.GetExtension(video_files[0]); ;
+                VideoFullName = SaveDir +"\\"+VideoName;
+                ParamStr = ffpmeg.GenerateVideoArgs(video_files, Align, VideoFullName);
+
+                ParamStr += " -y";
+                
+                WilfFile.CreateDirectory(SaveDir);
+                StartExternalProgram(ParamStr);   //ffmpeg -i input.mp4 -vf "scale=iw*1.5:ih*1.5" output.mp4
+            }
+        }
+
+        private void WaterMarkVideo(string[] video_files)  //ffmpeg -i video1.mp4 -i video2.mp4 -filter_complex vstack output.mp4
+        {
+            string SaveDir = Application.StartupPath + "\\WaterMarkVideo";
+            string DirName;
+            string ParamStr = "";
+            string VideoName;
+            WilfFile.CreateDirectory(SaveDir);
+
+            DirName = Path.GetFileName(Path.GetDirectoryName(video_files[0]));
+            SaveDir += "\\"+DirName;
+            WilfFile.CreateDirectory(SaveDir);
+
+            for (int i = 0;i < video_files.Length;i++)
+            {
+                VideoName = SaveDir +"\\"+Path.GetFileName(video_files[i]);
+                ParamStr = ffpmeg.GenerateWatermarkCommand(video_files[i]) + " ";
+                ParamStr += "-y ";
+                ParamStr += AddQuotes(VideoName)+" ";
+                if (File.Exists(VideoName))
+                    File.Delete(VideoName);
+                StartExternalProgram(ParamStr);   //ffmpeg -i input.mp4 -vf "scale=iw*1.5:ih*1.5" output.mp4
+            }
+        }
+
         private void GenerateImageFile(string ImageFilePath,string[] FileList)
         {
             StringBuilder str = new StringBuilder();
@@ -191,7 +293,10 @@ namespace UAV_TOOL
             AppendMsg(fileName +" "+ examinerNo+Environment.NewLine);
             //使用进程
             if (!File.Exists(fileName))
+            {
+                MessageBox.Show("The ffmpeg.exe program is missing");
                 return;
+            }
             Process myProcess = new Process();
             myProcess.StartInfo.UseShellExecute = false;
             myProcess.StartInfo.RedirectStandardOutput = true;
@@ -276,6 +381,60 @@ namespace UAV_TOOL
         {
             dataUI = new DataUI(this);
             dataUI.LoadData();
+        }
+
+        private void mergeVideoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RunMergeVideo(string Align)
+        {
+            string[] files;
+            AppendMsg("");
+            AppendMsg("************************************************" + Environment.NewLine);
+            files = WilfFile.OpenFiles(FormatVideoBox.Text);
+            if (files != null && files.Length>1)
+            {
+                MergeVideo(files, Align);
+            }
+            AppendMsg("===============================================" + Environment.NewLine);
+            AppendMsg("Over" + Environment.NewLine);
+        }
+
+        private void RunWaterMarkVideo()
+        {
+            string[] files;
+            AppendMsg("");
+            AppendMsg("************************************************" + Environment.NewLine);
+            files = WilfFile.OpenFiles(FormatVideoBox.Text);
+            if (files != null && files.Length>0)
+            {
+                WaterMarkVideo(files);
+            }
+            AppendMsg("===============================================" + Environment.NewLine);
+            AppendMsg("Over" + Environment.NewLine);
+        }
+
+
+        private void algnVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunMergeVideo("y");
+        }
+
+        private void algnHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunMergeVideo("x");
+        }
+
+        private void autoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunMergeVideo("a");
+        }
+
+        private void waterMarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunWaterMarkVideo();
         }
     }
 }
