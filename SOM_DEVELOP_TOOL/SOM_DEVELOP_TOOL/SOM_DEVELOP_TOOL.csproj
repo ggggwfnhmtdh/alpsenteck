@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47409AA5-62AE-4189-8E83-C471502DF5E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOM_DEVELOP_TOOL</RootNamespace>
+    <AssemblyName>SOM_DEVELOP_TOOL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SOM_DEVELOP_TOOL.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>SOM.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ELFSharp">
+      <HintPath>dll\ELFSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GuiLabs.MathParser">
+      <HintPath>dll\GuiLabs.MathParser.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>dll\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Other\临时\Excel\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>dll\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>dll\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>dll\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.ConfigurationManager">
+      <HintPath>..\Package\system.configuration.configurationmanager\net7.0\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSCS\Breakpoints.cs" />
+    <Compile Include="CSCS\Constants.cs" />
+    <Compile Include="CSCS\Constants.Extra.cs" />
+    <Compile Include="CSCS\CscsApp.cs" />
+    <Compile Include="CSCS\CustomClasses.cs" />
+    <Compile Include="CSCS\Debugger.cs" />
+    <Compile Include="CSCS\DebuggerServer.cs" />
+    <Compile Include="CSCS\DllCreator.cs" />
+    <Compile Include="CSCS\Functions.Flow.cs" />
+    <Compile Include="CSCS\Functions.Math.cs" />
+    <Compile Include="CSCS\Functions.OS.cs" />
+    <Compile Include="CSCS\Functions.SQL.cs" />
+    <Compile Include="CSCS\Functions.Standalone.cs" />
+    <Compile Include="CSCS\Functions.Utils.cs" />
+    <Compile Include="CSCS\ICscsModule.cs" />
+    <Compile Include="CSCS\Interpreter.cs" />
+    <Compile Include="CSCS\Interpreter.Standalone.cs" />
+    <Compile Include="CSCS\InterpreterManager.cs" />
+    <Compile Include="CSCS\InterpreterManagerFunctions.cs" />
+    <Compile Include="CSCS\InterpreterManagerInstance.cs" />
+    <Compile Include="CSCS\InterpreterManagerModule.cs" />
+    <Compile Include="CSCS\Parser.cs" />
+    <Compile Include="CSCS\ParserFunction.cs" />
+    <Compile Include="CSCS\ParsingScript.cs" />
+    <Compile Include="CSCS\Precompiler.cs" />
+    <Compile Include="CSCS\Statics.cs" />
+    <Compile Include="CSCS\TestClasses.cs" />
+    <Compile Include="CSCS\Translation.cs" />
+    <Compile Include="CSCS\Trie.cs" />
+    <Compile Include="CSCS\Utils.cs" />
+    <Compile Include="CSCS\Utils.Extra.cs" />
+    <Compile Include="CSCS\Utils.Parsing.cs" />
+    <Compile Include="CSCS\Variable.cs" />
+    <Compile Include="FormRTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRTT.Designer.cs">
+      <DependentUpon>FormRTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdForm.Designer.cs">
+      <DependentUpon>IdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenceForm.Designer.cs" />
+    <Compile Include="LoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadForm.Designer.cs">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainSubClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main\ImageInf.cs" />
+    <Compile Include="main\RegData.cs" />
+    <Compile Include="PinMap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOM\SOM.cs" />
+    <Compile Include="V86E.cs" />
+    <Compile Include="Wilf\AES.cs" />
+    <Compile Include="Wilf\ClearPro.cs" />
+    <Compile Include="Wilf\DataUI.cs" />
+    <Compile Include="Wilf\Debug.cs" />
+    <Compile Include="Wilf\Device.cs" />
+    <Compile Include="Wilf\easy_log.cs" />
+    <Compile Include="Wilf\Ecdsa\curve.cs" />
+    <Compile Include="Wilf\Ecdsa\ecdsa.cs" />
+    <Compile Include="Wilf\Ecdsa\math.cs" />
+    <Compile Include="Wilf\Ecdsa\point.cs" />
+    <Compile Include="Wilf\Ecdsa\privatekey.cs" />
+    <Compile Include="Wilf\Ecdsa\publickey.cs" />
+    <Compile Include="Wilf\Ecdsa\signature.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\base.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\binary.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\bytes.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\der.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\file.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\integer.cs" />
+    <Compile Include="Wilf\Ecdsa\utils\string.cs" />
+    <Compile Include="Wilf\Exe.cs" />
+    <Compile Include="Wilf\ExpressionEvaluator.cs" />
+    <Compile Include="Wilf\FLM.cs" />
+    <Compile Include="Wilf\FolderSelectDialog.cs" />
+    <Compile Include="Wilf\gCfg.cs" />
+    <Compile Include="Wilf\GlobalSuppressions.cs" />
+    <Compile Include="Wilf\HexData.cs" />
+    <Compile Include="Wilf\JlinkOp.cs" />
+    <Compile Include="Wilf\jlink_protocol.cs" />
+    <Compile Include="Wilf\Json.cs" />
+    <Compile Include="Wilf\Keil.cs" />
+    <Compile Include="Wilf\MapParser.cs" />
+    <Compile Include="Wilf\ProjectInf.cs" />
+    <Compile Include="Wilf\Reflector.cs" />
+    <Compile Include="Wilf\SE.cs" />
+    <Compile Include="Wilf\Server.cs" />
+    <Compile Include="Wilf\SignalDevice.cs" />
+    <Compile Include="SOM\SomReg.cs" />
+    <Compile Include="Wilf\SphinxCodePro.cs" />
+    <Compile Include="Wilf\TestCase.cs" />
+    <Compile Include="Wilf\Timetamp.cs" />
+    <Compile Include="Wilf\WilfDataPro.cs" />
+    <Compile Include="Wilf\WilfFile.cs" />
+    <Compile Include="Wilf\WilfOffice.cs" />
+    <Compile Include="Wilf\XmlTool.cs" />
+    <Compile Include="Wilf\Zip.cs" />
+    <EmbeddedResource Include="FormRTT.resx">
+      <DependentUpon>FormRTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdForm.resx">
+      <DependentUpon>IdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenceForm.resx" />
+    <EmbeddedResource Include="LoadForm.resx">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="File\IPC.hex" />
+    <EmbeddedResource Include="File\Apollo4.FLM" />
+    <EmbeddedResource Include="File\ApolloFLM.hex" />
+    <EmbeddedResource Include="File\bootloader.hex" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\win10HighDPI.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_assessment_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_backup_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_bluetooth_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_bookmark_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_build_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_gps_fixed_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_http_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_report_problem_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_swap_vert_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_build_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_fingerprint_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_thumb_up_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_bluetooth_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_favorite_border_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_add_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="097-download.ico" />
+    <EmbeddedResource Include="File\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="SOM.ico" />
+    <EmbeddedResource Include="File\ELFSharp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="IPC.ico" />
+    <EmbeddedResource Include="File\JLinkARM.dll" />
+    <EmbeddedResource Include="File\GuiLabs.MathParser.dll" />
+    <EmbeddedResource Include="File\MaterialSkin.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File\Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="File\NPOI.dll" />
+    <EmbeddedResource Include="File\ScanFreq.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

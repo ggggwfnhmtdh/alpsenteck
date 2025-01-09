@@ -1,0 +1,1 @@
+card_reader.exe -p enableSWD.bin

@@ -1,0 +1,2 @@
+dsp_m0_common_ptr->dsp_to_m0.sml1_configs.pcm.debug.phases,32,0=pcm_init_rf_avoid,1=pcm_gt,2=pcm_cmd,3=pcm_fdt_lsn,4=pcm_lsn_rsp,5=pcm_fdt_poll,6=pcm_rf_off
+int_stat_reg,1,0=DSPINFIFO1_FILLING_MSK,1=DSPINFIFO2_FILLING_MSK,2=DSPOUTFIFO_FILLING_MSK,3=TXSER_UNDRFLW_MSK,4=TXSER_TXEND_MSK,5=CEA_TXEND_MSK,6=MDM_RXEND_MSK,23=CEA_STATE1_MSK,22=CEA_TXMUTE_MSK

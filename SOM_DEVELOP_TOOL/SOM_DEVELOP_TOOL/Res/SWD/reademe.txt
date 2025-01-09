@@ -1,0 +1,4 @@
+1. 根据电脑上EVK的串口号，修改config.ini中reader=\\.\COM21为本地串口号
+2. 复位EVK，确保开始FWDLPIN为高电平，可以执行硬件I2C写数据；
+3. 点击执行card_reader.exe-enableSWD，提示OK后，关闭命令行窗口；
+4. 然后将JTAG的电源，CLK，DIO链接上就可以了（按照EVK的PIN映射脚进行链接）
