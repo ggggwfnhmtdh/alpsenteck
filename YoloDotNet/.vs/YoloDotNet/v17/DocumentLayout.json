@@ -1,14 +1,145 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\SelfProject\\YoloDotNet\\",
+  "WorkspaceRootPath": "F:\\Alpsenteck-git\\YoloDotNet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9FAD402E-E86D-4BF9-BE07-2AFC10A1B036}|ConsoleDemo\\ConsoleDemo.csproj|f:\\selfproject\\yolodotnet\\consoledemo\\consoledemo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{9FAD402E-E86D-4BF9-BE07-2AFC10A1B036}|ConsoleDemo\\ConsoleDemo.csproj|solutionrelative:consoledemo\\consoledemo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\extensions\\imageextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\extensions\\imageextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\selfproject\\yolodotnet\\yolodotnet\\core\\yolocore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\core\\yolocore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\core\\yolocore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\extensions\\onnxpropertiesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\extensions\\onnxpropertiesextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\core\\yolodotnetcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\core\\yolodotnetcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\models\\classification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\models\\classification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\models\\objectdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\models\\objectdetection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v8\\poseestimationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v8\\poseestimationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\yolo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\yolo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\models\\labelmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\models\\labelmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|F:\\Alpsenteck-git\\YoloDotNet\\yoloapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v8\\objectdetectionmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v8\\objectdetectionmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\wilfclass\\dataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\wilfclass\\dataui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{086DFB71-ACF4-4856-A73E-F20B9DB8775A}|test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj|f:\\alpsenteck-git\\yolodotnet\\test\\yolodotnet.test.common\\sharedconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{086DFB71-ACF4-4856-A73E-F20B9DB8775A}|test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj|solutionrelative:test\\yolodotnet.test.common\\sharedconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wilf\\AppData\\Local\\Temp\\Rar$DIa12852.47388\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\wilfclass\\wilfdatapro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\wilfclass\\wilfdatapro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\wilfclass\\wilffile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\wilfclass\\wilffile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\cyolo5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\cyolo5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B56E817-B2DF-4C76-8700-03F906D2051D}|Solution Items{6B56E817-B2DF-4C76-8700-03F906D2051D}|F:\\Alpsenteck-git\\YoloDotNet\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{6B56E817-B2DF-4C76-8700-03F906D2051D}|Solution Items{6B56E817-B2DF-4C76-8700-03F906D2051D}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v9\\objectdetectionmodulev9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v9\\objectdetectionmodulev9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v10\\objectdetectionmodulev10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v10\\objectdetectionmodulev10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v8\\classificationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v8\\classificationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v8\\obbdetectionmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v8\\obbdetectionmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\wilfclass\\ffpmeg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\wilfclass\\ffpmeg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\wilfclass\\reflector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\wilfclass\\reflector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\wilfclass\\hexdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\wilfclass\\hexdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|f:\\alpsenteck-git\\yolodotnet\\yoloapp\\keypointsetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D408473-DB70-4D9E-A6BF-C982CC68499D}|YoloApp\\YoloApp.csproj|solutionrelative:yoloapp\\keypointsetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FAD402E-E86D-4BF9-BE07-2AFC10A1B036}|ConsoleDemo\\ConsoleDemo.csproj|f:\\alpsenteck-git\\yolodotnet\\consoledemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FAD402E-E86D-4BF9-BE07-2AFC10A1B036}|ConsoleDemo\\ConsoleDemo.csproj|solutionrelative:consoledemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{086DFB71-ACF4-4856-A73E-F20B9DB8775A}|test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj|f:\\alpsenteck-git\\yolodotnet\\test\\yolodotnet.test.common\\yolodotnet.test.common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{086DFB71-ACF4-4856-A73E-F20B9DB8775A}|test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj|solutionrelative:test\\yolodotnet.test.common\\yolodotnet.test.common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v11\\segmentationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v11\\segmentationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\worldv2\\objectdetectionmoduleworldv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\worldv2\\objectdetectionmoduleworldv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v11\\obbdetectionmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v11\\obbdetectionmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v8\\segmentationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v8\\segmentationmodulev8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|f:\\alpsenteck-git\\yolodotnet\\yolodotnet\\modules\\v11\\objectdetectionmodulev11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE4C546-9391-49F6-A635-7BD715CD9D14}|YoloDotNet\\YoloDotNet.csproj|solutionrelative:yolodotnet\\modules\\v11\\objectdetectionmodulev11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +149,436 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ObjectDetection.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Models\\ObjectDetection.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Models\\ObjectDetection.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Models\\ObjectDetection.cs",
+              "RelativeToolTip": "YoloDotNet\\Models\\ObjectDetection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:52:23.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PoseEstimationModuleV8.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\PoseEstimationModuleV8.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V8\\PoseEstimationModuleV8.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\PoseEstimationModuleV8.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V8\\PoseEstimationModuleV8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:52:17.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ConsoleDemo",
-              "DocumentMoniker": "F:\\SelfProject\\YoloDotNet\\ConsoleDemo\\ConsoleDemo.csproj",
-              "RelativeDocumentMoniker": "ConsoleDemo\\ConsoleDemo.csproj",
-              "ToolTip": "F:\\SelfProject\\YoloDotNet\\ConsoleDemo\\ConsoleDemo.csproj",
-              "RelativeToolTip": "ConsoleDemo\\ConsoleDemo.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-09T11:33:30.651Z",
+              "Title": "ImageExtension.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Extensions\\ImageExtension.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Extensions\\ImageExtension.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Extensions\\ImageExtension.cs",
+              "RelativeToolTip": "YoloDotNet\\Extensions\\ImageExtension.cs",
+              "ViewState": "AgIAAKUBAAAAAAAAAADwv7wBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:51:49.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LabelModel.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Models\\LabelModel.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Models\\LabelModel.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Models\\LabelModel.cs",
+              "RelativeToolTip": "YoloDotNet\\Models\\LabelModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:51:29.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "YoloDotNetColors.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Core\\YoloDotNetColors.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Core\\YoloDotNetColors.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Core\\YoloDotNetColors.cs",
+              "RelativeToolTip": "YoloDotNet\\Core\\YoloDotNetColors.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:47:09.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "YoloCore.cs",
-              "DocumentMoniker": "F:\\SelfProject\\YoloDotNet\\YoloDotNet\\Core\\YoloCore.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Core\\YoloCore.cs",
               "RelativeDocumentMoniker": "YoloDotNet\\Core\\YoloCore.cs",
-              "ToolTip": "F:\\SelfProject\\YoloDotNet\\YoloDotNet\\Core\\YoloCore.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Core\\YoloCore.cs",
               "RelativeToolTip": "YoloDotNet\\Core\\YoloCore.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwCMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T11:32:35.421Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OnnxPropertiesExtension.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Extensions\\OnnxPropertiesExtension.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Extensions\\OnnxPropertiesExtension.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Extensions\\OnnxPropertiesExtension.cs",
+              "RelativeToolTip": "YoloDotNet\\Extensions\\OnnxPropertiesExtension.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T08:21:21.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Classification.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Models\\Classification.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Models\\Classification.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Models\\Classification.cs",
+              "RelativeToolTip": "YoloDotNet\\Models\\Classification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T13:52:27.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ObjectDetectionModuleV8.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\ObjectDetectionModuleV8.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V8\\ObjectDetectionModuleV8.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\ObjectDetectionModuleV8.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V8\\ObjectDetectionModuleV8.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwFkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:47:46.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "WilfFile.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\WilfFile.cs",
+              "RelativeDocumentMoniker": "YoloApp\\WilfClass\\WilfFile.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\WilfFile.cs",
+              "RelativeToolTip": "YoloApp\\WilfClass\\WilfFile.cs",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAkwEABAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:33:12.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SharedConfig.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\test\\YoloDotNet.Test.Common\\SharedConfig.cs",
+              "RelativeDocumentMoniker": "test\\YoloDotNet.Test.Common\\SharedConfig.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\test\\YoloDotNet.Test.Common\\SharedConfig.cs",
+              "RelativeToolTip": "test\\YoloDotNet.Test.Common\\SharedConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T06:45:37.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Yolo.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Yolo.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Yolo.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Yolo.cs",
+              "RelativeToolTip": "YoloDotNet\\Yolo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:39:05.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\wilf\\AppData\\Local\\Temp\\Rar$DIa12852.47388\\Program.cs",
+              "ToolTip": "C:\\Users\\wilf\\AppData\\Local\\Temp\\Rar$DIa12852.47388\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T03:01:04.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\Form1.cs",
+              "RelativeDocumentMoniker": "YoloApp\\Form1.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\Form1.cs",
+              "RelativeToolTip": "YoloApp\\Form1.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAvwK0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:16:29.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\Form1.cs",
+              "RelativeDocumentMoniker": "YoloApp\\Form1.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "YoloApp\\Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:12:05.829Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataUI.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\DataUI.cs",
+              "RelativeDocumentMoniker": "YoloApp\\WilfClass\\DataUI.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\DataUI.cs",
+              "RelativeToolTip": "YoloApp\\WilfClass\\DataUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:32:48.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OBBDetectionModuleV8.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\OBBDetectionModuleV8.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V8\\OBBDetectionModuleV8.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\OBBDetectionModuleV8.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V8\\OBBDetectionModuleV8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:40:09.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WilfDataPro.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\WilfDataPro.cs",
+              "RelativeDocumentMoniker": "YoloApp\\WilfClass\\WilfDataPro.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\WilfDataPro.cs",
+              "RelativeToolTip": "YoloApp\\WilfClass\\WilfDataPro.cs",
+              "ViewState": "AgIAAEwBAAAAAAAAAAAkwF8BAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:33:08.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\Program.cs",
+              "RelativeDocumentMoniker": "YoloApp\\Program.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\Program.cs",
+              "RelativeToolTip": "YoloApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:12:54.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CYolo5.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\CYolo5.cs",
+              "RelativeDocumentMoniker": "YoloApp\\CYolo5.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\CYolo5.cs",
+              "RelativeToolTip": "YoloApp\\CYolo5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T13:34:54.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ObjectDetectionModuleV10.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V10\\ObjectDetectionModuleV10.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V10\\ObjectDetectionModuleV10.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V10\\ObjectDetectionModuleV10.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V10\\ObjectDetectionModuleV10.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:09:22.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "README.md",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAACoBAAAAAAAAAAASwD4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-01-10T08:03:59.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ObjectDetectionModuleV9.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V9\\ObjectDetectionModuleV9.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V9\\ObjectDetectionModuleV9.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V9\\ObjectDetectionModuleV9.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V9\\ObjectDetectionModuleV9.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:39:03.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClassificationModuleV8.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\ClassificationModuleV8.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V8\\ClassificationModuleV8.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\ClassificationModuleV8.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V8\\ClassificationModuleV8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:09:40.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ffpmeg.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\ffpmeg.cs",
+              "RelativeDocumentMoniker": "YoloApp\\WilfClass\\ffpmeg.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\ffpmeg.cs",
+              "RelativeToolTip": "YoloApp\\WilfClass\\ffpmeg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:32:53.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HexData.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\HexData.cs",
+              "RelativeDocumentMoniker": "YoloApp\\WilfClass\\HexData.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\HexData.cs",
+              "RelativeToolTip": "YoloApp\\WilfClass\\HexData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:33:02.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Reflector.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\Reflector.cs",
+              "RelativeDocumentMoniker": "YoloApp\\WilfClass\\Reflector.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\WilfClass\\Reflector.cs",
+              "RelativeToolTip": "YoloApp\\WilfClass\\Reflector.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwDUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:33:05.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "KeyPointSetup.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\KeyPointSetup.cs",
+              "RelativeDocumentMoniker": "YoloApp\\KeyPointSetup.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloApp\\KeyPointSetup.cs",
+              "RelativeToolTip": "YoloApp\\KeyPointSetup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T07:29:35.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OBBDetectionModule.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V11\\OBBDetectionModule.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V11\\OBBDetectionModule.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V11\\OBBDetectionModule.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V11\\OBBDetectionModule.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIAzwBkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:39:00.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\ConsoleDemo\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleDemo\\Program.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\ConsoleDemo\\Program.cs",
+              "RelativeToolTip": "ConsoleDemo\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:12:24.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "YoloDotNet.Test.Common.csproj",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj",
+              "RelativeDocumentMoniker": "test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj",
+              "RelativeToolTip": "test\\YoloDotNet.Test.Common\\YoloDotNet.Test.Common.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAABBwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-10T06:45:43.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SegmentationModuleV8.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V11\\SegmentationModuleV8.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V11\\SegmentationModuleV8.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V11\\SegmentationModuleV8.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V11\\SegmentationModuleV8.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAASwBkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:38:46.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ObjectDetectionModuleWorldV2.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\WorldV2\\ObjectDetectionModuleWorldV2.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\WorldV2\\ObjectDetectionModuleWorldV2.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\WorldV2\\ObjectDetectionModuleWorldV2.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\WorldV2\\ObjectDetectionModuleWorldV2.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAASwBkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:38:54.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "SegmentationModuleV8.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\SegmentationModuleV8.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V8\\SegmentationModuleV8.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V8\\SegmentationModuleV8.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V8\\SegmentationModuleV8.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:35:14.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ObjectDetectionModuleV11.cs",
+              "DocumentMoniker": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V11\\ObjectDetectionModuleV11.cs",
+              "RelativeDocumentMoniker": "YoloDotNet\\Modules\\V11\\ObjectDetectionModuleV11.cs",
+              "ToolTip": "F:\\Alpsenteck-git\\YoloDotNet\\YoloDotNet\\Modules\\V11\\ObjectDetectionModuleV11.cs",
+              "RelativeToolTip": "YoloDotNet\\Modules\\V11\\ObjectDetectionModuleV11.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAASwBkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:39:29.307Z"
             }
           ]
         }

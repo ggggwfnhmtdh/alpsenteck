@@ -45,6 +45,7 @@
             this.algnHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.algnVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.waterMarkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.FormatImageBox = new System.Windows.Forms.TextBox();
             this.MsgBox = new System.Windows.Forms.RichTextBox();
@@ -53,7 +54,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.FpsExternalCB = new System.Windows.Forms.CheckBox();
             this.SubDirCB = new System.Windows.Forms.CheckBox();
-            this.waterMarkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.concatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -181,7 +182,8 @@
             this.mergeVideoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.algnHToolStripMenuItem,
             this.algnVToolStripMenuItem,
-            this.autoToolStripMenuItem});
+            this.autoToolStripMenuItem,
+            this.concatToolStripMenuItem});
             this.mergeVideoToolStripMenuItem.Name = "mergeVideoToolStripMenuItem";
             this.mergeVideoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.mergeVideoToolStripMenuItem.Text = "MergeVideo";
@@ -207,6 +209,13 @@
             this.autoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.autoToolStripMenuItem.Text = "Auto";
             this.autoToolStripMenuItem.Click += new System.EventHandler(this.autoToolStripMenuItem_Click);
+            // 
+            // waterMarkToolStripMenuItem
+            // 
+            this.waterMarkToolStripMenuItem.Name = "waterMarkToolStripMenuItem";
+            this.waterMarkToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.waterMarkToolStripMenuItem.Text = "WaterMark";
+            this.waterMarkToolStripMenuItem.Click += new System.EventHandler(this.waterMarkToolStripMenuItem_Click);
             // 
             // label4
             // 
@@ -295,12 +304,12 @@
             this.SubDirCB.Text = "SubDirectory";
             this.SubDirCB.UseVisualStyleBackColor = true;
             // 
-            // waterMarkToolStripMenuItem
+            // concatToolStripMenuItem
             // 
-            this.waterMarkToolStripMenuItem.Name = "waterMarkToolStripMenuItem";
-            this.waterMarkToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.waterMarkToolStripMenuItem.Text = "WaterMark";
-            this.waterMarkToolStripMenuItem.Click += new System.EventHandler(this.waterMarkToolStripMenuItem_Click);
+            this.concatToolStripMenuItem.Name = "concatToolStripMenuItem";
+            this.concatToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.concatToolStripMenuItem.Text = "Concat";
+            this.concatToolStripMenuItem.Click += new System.EventHandler(this.concatToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -354,6 +363,7 @@
         private System.Windows.Forms.ToolStripMenuItem algnHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem waterMarkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem concatToolStripMenuItem;
     }
 }
 

@@ -11,8 +11,10 @@
         {
             var metaData = session.ModelMetadata.CustomMetadataMap;
 
-            var modelType = GetModelType(metaData[NameOf(MetaData.Task)]);
-            var modelVersion = GetModelVersion(metaData[NameOf(MetaData.Description)]);
+            string TempInf = NameOf(MetaData.Task);
+            var modelType = GetModelType(metaData[TempInf]);
+            string Temp2 = NameOf(MetaData.Description);
+            var modelVersion = GetModelVersion(metaData[Temp2]);
 
             var inputName = session.InputNames[0];
             var outputNames = session.OutputNames.ToList();
@@ -112,7 +114,8 @@
             var version when version.StartsWith("ultralytics yolov10") => ModelVersion.V10,
             var version when version.StartsWith("ultralytics yolo11") => ModelVersion.V11, // Note the missing v in Yolo11
             var version when version.Contains("worldv2") => ModelVersion.V11,
-            _ => throw new NotSupportedException("Onnx model not supported!")
+            _ => ModelVersion.V8
+            //_ => throw new NotSupportedException("Onnx model not supported!")
         };
 
         #endregion

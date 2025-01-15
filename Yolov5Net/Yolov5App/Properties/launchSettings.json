@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Yolov5App": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

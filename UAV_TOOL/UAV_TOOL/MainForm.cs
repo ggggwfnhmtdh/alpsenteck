@@ -36,6 +36,7 @@ namespace UAV_TOOL
         public bool SubDirEnable = false;
         public bool FpsExternal = false;
         public Hashtable m_fps_table = new Hashtable();
+        public string extern_tool = Application.StartupPath + "\\" + "Tools";
         DataUI dataUI;
         public MainForm()
         {
@@ -288,8 +289,7 @@ namespace UAV_TOOL
         }
         public void StartExternalProgram(string examinerNo)
         {
-            string exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fileName = exePath + "\\ffmpeg.exe";
+            string fileName = extern_tool + "\\ffmpeg.exe";
             AppendMsg(fileName +" "+ examinerNo+Environment.NewLine);
             //使用进程
             if (!File.Exists(fileName))
@@ -304,7 +304,7 @@ namespace UAV_TOOL
             myProcess.StartInfo.CreateNoWindow = true;
             //传参，参数以空格分隔，如果某个参数为空，可以传入“”
             myProcess.StartInfo.Arguments = examinerNo;
-            myProcess.StartInfo.WorkingDirectory = exePath;//设置要启动的进程的初始目录
+            myProcess.StartInfo.WorkingDirectory = extern_tool;//设置要启动的进程的初始目录
             myProcess.Start();//启动
             myProcess.WaitForExit(15000);//等待exe程序处理完，超时15秒
             string xmldata = myProcess.StandardOutput.ReadToEnd();//读取exe中内存流数据
@@ -381,6 +381,7 @@ namespace UAV_TOOL
         {
             dataUI = new DataUI(this);
             dataUI.LoadData();
+            WilfFile.CreateDirectory(extern_tool);
         }
 
         private void mergeVideoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -397,6 +398,20 @@ namespace UAV_TOOL
             if (files != null && files.Length>1)
             {
                 MergeVideo(files, Align);
+            }
+            AppendMsg("===============================================" + Environment.NewLine);
+            AppendMsg("Over" + Environment.NewLine);
+        }
+
+        private void RunConcatVideo()
+        {
+            string[] files;
+            AppendMsg("");
+            AppendMsg("************************************************" + Environment.NewLine);
+            files = WilfFile.OpenFiles(FormatVideoBox.Text);
+            if (files != null && files.Length>1)
+            {
+                ConcatVideo(files);
             }
             AppendMsg("===============================================" + Environment.NewLine);
             AppendMsg("Over" + Environment.NewLine);
@@ -435,6 +450,35 @@ namespace UAV_TOOL
         private void waterMarkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RunWaterMarkVideo();
+        }
+
+        private void concatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunConcatVideo();
+        }
+
+        private void ConcatVideo(string[] FileList)
+        {
+            string VideoName, ImageFileName;
+            string SaveDir = Application.StartupPath + "\\ConcatVideo";
+            string DirName;
+            WilfFile.CreateDirectory(SaveDir);
+
+            if (FileList.Length > 0)
+            {
+                DirName = Path.GetFileName(Path.GetDirectoryName(FileList[0]));
+                string ParamStr = "";
+                ImageFileName =  SaveDir +"\\"+DirName+".txt";
+                VideoName =  SaveDir +"\\"+DirName+Path.GetExtension(FileList[0]);
+                GenerateImageFile(ImageFileName, FileList);
+                ParamStr += "-f concat ";
+                ParamStr += "-safe 0 ";
+                ParamStr += " -i "+ AddQuotes(ImageFileName) + " ";
+                ParamStr += "-y ";
+                ParamStr += "-c copy ";
+                ParamStr += AddQuotes(VideoName);
+                StartExternalProgram(ParamStr);  
+            }
         }
     }
 }

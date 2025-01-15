@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="{d3295d87-d604-11d4-a704-00c04fa137e4}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>10</VersionMajor>
+      <Guid>d3295d87-d604-11d4-a704-00c04fa137e4</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\test\YoloDotNet.Test.Common\YoloDotNet.Test.Common.csproj" />
+    <ProjectReference Include="..\YoloDotNet\YoloDotNet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Yolov5Net.Scorer">
+      <HintPath>..\..\Yolov5Net\src\Yolov5Net.Scorer\bin\Debug\net6.0\Yolov5Net.Scorer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -8,13 +8,22 @@
 
     public static class SharedConfig
     {
-        private const string ASSETS_FOLDER = @".\assets";
-        private const string BASE_MODELS = ASSETS_FOLDER + @"\models";
-        private const string BASE_MEDIA = ASSETS_FOLDER + @"\media";
+        private const string BASE_MODELS = @".\models";
+        private const string BASE_MEDIA = @".\media";
+        private const string BASE_MODELS_Alpsentek = @".\models\Alpsentek";
 
         public static string GetTestModelVx(ModelType modelType)
         {
-            return Path.Combine(BASE_MODELS, "alpsenteck_v8.onnx");
+            if (Directory.Exists(BASE_MODELS_Alpsentek))
+            {
+                DirectoryInfo directoryInfo = new DirectoryInfo(BASE_MODELS_Alpsentek);
+                FileInfo[] files = directoryInfo.GetFiles();
+                if (files.Length>0)
+                {
+                    return files[0].FullName;
+                }
+            }
+            return "";
         }
         /// <summary>
         /// Test models for Yolo V8

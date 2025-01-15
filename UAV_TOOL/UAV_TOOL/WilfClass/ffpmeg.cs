@@ -18,7 +18,7 @@ namespace UAV_TOOL.WilfClass
             string videoName = Path.GetFileName(inputFile);
 
             // 生成最简洁的 ffmpeg 命令
-            string filterComplex = $"drawtext=text='{videoName}':x=10:y=10:fontsize=50:fontcolor=yellow";
+            string filterComplex = $"drawtext=text='{videoName}':x=10:y=10:fontsize=20:fontcolor=yellow";
 
             string command = $"-i \"{inputFile}\" -vf \"{filterComplex}\"";
 

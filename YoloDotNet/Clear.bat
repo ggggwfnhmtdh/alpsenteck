@@ -12,4 +12,6 @@ rd /s /q .\test\Benchmarks\bin
 rd /s /q .\test\Benchmarks\obj
 rd /s /q .\test\YoloDotNet.Tests\bin
 rd /s /q .\test\YoloDotNet.Tests\obj
+rd /s /q .\YoloApp\bin
+rd /s /q .\YoloApp\obj
 pause
