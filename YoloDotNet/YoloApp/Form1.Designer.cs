@@ -66,7 +66,7 @@
             MsgBox.BorderStyle = BorderStyle.None;
             MsgBox.Location = new Point(0, 35);
             MsgBox.Name = "MsgBox";
-            MsgBox.Size = new Size(1111, 469);
+            MsgBox.Size = new Size(1487, 685);
             MsgBox.TabIndex = 1;
             MsgBox.Text = "";
             // 
@@ -76,7 +76,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fILEToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1111, 32);
+            menuStrip1.Size = new Size(1487, 32);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -189,9 +189,9 @@
             groupBox2.Controls.Add(PathInBox);
             groupBox2.Controls.Add(groupBox1);
             groupBox2.Controls.Add(StartBtn);
-            groupBox2.Location = new Point(0, 510);
+            groupBox2.Location = new Point(0, 726);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1111, 233);
+            groupBox2.Size = new Size(1487, 250);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             // 
@@ -219,7 +219,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1111, 738);
+            ClientSize = new Size(1487, 954);
             Controls.Add(groupBox2);
             Controls.Add(MsgBox);
             Controls.Add(menuStrip1);
