@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Collections;
 //using MathNet.Numerics.Statistics;
 namespace Yolov5App
 {
@@ -586,6 +587,49 @@ namespace Yolov5App
             return mData;
         }
 
+        public static List<double[]> GetDoubleDataFromFile(string path)
+        {
+            string[] LineStr = File.ReadAllLines(path);
+            double[] row_data;
+            List<double[]> all_data = new List<double[]>();
+            for (int i = 0; i < LineStr.Length; i++)
+            {
+                LineStr[i] = LineStr[i].Replace(" ", "");
+                string[] Line = LineStr[i].Split(new char[] { ',' });
+                row_data = new double[Line.Length];
+                for (int k = 0; k < Line.Length; k++)
+                {
+                    row_data[k] = Convert.ToDouble(Line[k]);
+                }
+                all_data.Add(row_data);
+            }
+            return all_data;
+        }
+
+        public static List<int[]> GetIntDataFromFile(string path)
+        {
+            string[] LineStr = File.ReadAllLines(path);
+            int[] row_data;
+            List<int[]> all_data = new List<int[]>();
+            for (int i = 0; i < LineStr.Length; i++)
+            {
+                LineStr[i] = LineStr[i].Replace(" ", "");
+                string[] Line = LineStr[i].Split(new char[] { ',' });
+                row_data = new int[Line.Length];
+                for (int k = 0; k < Line.Length; k++)
+                {
+                    if(Line[k].Contains("NaN"))
+                    {
+                        row_data = new int[] { -1, -1, -1, -1 };
+                        break;
+                    }
+                    row_data[k] = Convert.ToInt32(Line[k]);
+                }
+                all_data.Add(row_data);
+            }
+            return all_data;
+        }
+
         public static string ByteToString(byte[] InData,string Type,int ColNum)
         {
             int i;
@@ -599,6 +643,18 @@ namespace Yolov5App
             }
             sb.Append(InData[i].ToString(Type));
             return sb.ToString();
+        }
+
+        public static Hashtable StringToHashtable(string msg)
+        {
+            Hashtable ht = new Hashtable();
+            string[] strs = msg.Replace(" ", "").Split(new char[] { ',' });
+            for (int i = 0; i < strs.Length; i++)
+            {
+                if (ht.ContainsKey(strs[i]) == false)
+                    ht.Add(strs[i], i);
+            }
+            return ht;
         }
     }
 }

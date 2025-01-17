@@ -6,6 +6,9 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using System;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Text;
+using Yolov5App.WilfClass;
 using Yolov5Net.Scorer;
 using Yolov5Net.Scorer.Models;
 using Yolov5Net.Scorer.Models.Abstract;
@@ -14,6 +17,7 @@ namespace Yolov5App
 {
     public partial class MainForm : Form
     {
+        public static string DocDir = Application.StartupPath + "DOC";
         DataUI dataUI;
         public bool log_to_file_flag = false;
         public string log_file = "log";
@@ -22,7 +26,7 @@ namespace Yolov5App
         //private delegate void ThreadWorkStrColor(string Msg, color);
         private delegate void ThreadWorkStr2(string Msg0, string Msg1);
         public string BASE_MODELS_Alpsentek = @".\Models\Alpsentek";
-        public string BASE_MODELS= @".\Models";
+        public string BASE_MODELS = @".\Models";
 
         public Thread m_thread_test;
         public bool ModelEnableV5 = false;
@@ -33,8 +37,9 @@ namespace Yolov5App
         public bool ModelEnableAlpsentek = false;
         public bool SubModeEnable = false;
         public double test_num_ratio = 100;
+        public int max_num = int.MaxValue;
 
-        public string OUTPUT_FOLDER = System.AppDomain.CurrentDomain.BaseDirectory + "\\YoloDotNet_Results";
+        public string OUTPUT_FOLDER = Application.StartupPath + "YoloDotNet_Results";
         public MainForm()
         {
             InitializeComponent();
@@ -45,6 +50,9 @@ namespace Yolov5App
 
             string Dir = ImageDir;
             string SaveDir;
+            string SaveRsultDir;
+            int image_num;
+            StringBuilder sb = new StringBuilder();
             if (!Directory.Exists(ImageDir))
             {
                 AppendMsg("目录不存在" + Environment.NewLine);
@@ -62,66 +70,15 @@ namespace Yolov5App
                 var scorer = new YoloScorer<YoloCocoPxModel>(model_file);
 
                 var font = new SixLabors.Fonts.Font(new FontCollection().Add("C:/Windows/Fonts/consola.ttf"), 16);
+                SaveRsultDir = OUTPUT_FOLDER +"\\"+ System.IO.Path.GetFileNameWithoutExtension(model_file);
                 SaveDir = OUTPUT_FOLDER +"\\"+ System.IO.Path.GetFileNameWithoutExtension(model_file)+"\\"+ System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(files[0].FullName));
+                CreateOutputFolder(SaveRsultDir);
                 CreateOutputFolder(SaveDir);
                 WilfFile.DelFile(SaveDir, "*");
-
-                for (int i = 0; i<(int)(files.Length*(test_num_ratio/100.0)); i++)
-                {
-                    double ratio = (double)(i*100)/files.Length;                  
-                    AppendLine(System.IO.Path.GetFileName(ImageDir) +" ratio:"+ratio.ToString("F2")+"% "+i+"/"+files.Length+")");
-                    var image = SixLabors.ImageSharp.Image.Load<Rgba32>(files[i].FullName);
-                    var predictions = scorer.Predict(image);
-                    foreach (var prediction in predictions) // draw predictions
-                    {
-                        var score = Math.Round(prediction.Score, 2);
-
-                        var (x, y) = (prediction.Rectangle.Left - 3, prediction.Rectangle.Top - 23);
-
-                        image.Mutate(a => a.DrawPolygon(new SixLabors.ImageSharp.Drawing.Processing.Pen(prediction.Label.Color, 1),
-                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Left, prediction.Rectangle.Top),
-                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Right, prediction.Rectangle.Top),
-                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Right, prediction.Rectangle.Bottom),
-                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Left, prediction.Rectangle.Bottom)
-                        ));
-
-                        image.Mutate(a => a.DrawText($"{prediction.Label.Name} ({score})",
-                            font, prediction.Label.Color, new SixLabors.ImageSharp.PointF(x, y)));
-                    }
-                    image.Save(SaveDir + "\\" + System.IO.Path.GetFileName(files[i].FullName));
-                    if (m_thread_test == null)
-                        break;
-                }
-            }
-        }
-
-        public void RunYolo(string ImageDir, string model_file)
-        {
-
-            string Dir = ImageDir;
-            string SaveDir;
-            if (!Directory.Exists(ImageDir))
-            {
-                AppendMsg("目录不存在" + Environment.NewLine);
-                return;
-            }
-
-            AppendMsg("------------------------------------------------" + Environment.NewLine);
-            DirectoryInfo directoryInfo = new DirectoryInfo(Dir);
-            FileInfo[] files = directoryInfo.GetFiles();
-            CreateOutputFolder(OUTPUT_FOLDER);
-
-
-            if (files.Length>0)
-            {
-                var scorer = new YoloScorer<YoloCocoP5Model>(model_file);
-
-                var font = new SixLabors.Fonts.Font(new FontCollection().Add("C:/Windows/Fonts/consola.ttf"), 16);
-                SaveDir = OUTPUT_FOLDER +"\\"+ System.IO.Path.GetFileNameWithoutExtension(model_file)+"\\"+ System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(files[0].FullName));
-                CreateOutputFolder(SaveDir);
-                WilfFile.DelFile(SaveDir, "*");
-
-                for (int i = 0; i<(int)(files.Length*(test_num_ratio/100.0)); i++)
+                sb.Append("file_name,"+"label_name,"+"id,"+"score,"+"x,"+"y,"+"w,"+"h,"+Environment.NewLine);
+                image_num =(int)(files.Length*(test_num_ratio/100.0));
+                image_num = Math.Min(max_num, image_num);
+                for (int i = 0; i<image_num; i++)
                 {
                     double ratio = (double)(i*100)/files.Length;
                     AppendLine(System.IO.Path.GetFileName(ImageDir) +" ratio:"+ratio.ToString("F2")+"% "+i+"/"+files.Length+")");
@@ -142,11 +99,111 @@ namespace Yolov5App
 
                         image.Mutate(a => a.DrawText($"{prediction.Label.Name} ({score})",
                             font, prediction.Label.Color, new SixLabors.ImageSharp.PointF(x, y)));
+
+                        sb.Append(System.IO.Path.GetFileName(files[i].FullName)+",");
+                        sb.Append(prediction.Label.Name+","+prediction.Label.Id+",");
+                        sb.Append(prediction.Score +","+prediction.Rectangle.X+","+prediction.Rectangle.Y+","+prediction.Rectangle.Width+","+prediction.Rectangle.Height+Environment.NewLine);
+
                     }
                     image.Save(SaveDir + "\\" + System.IO.Path.GetFileName(files[i].FullName));
                     if (m_thread_test == null)
                         break;
                 }
+                File.WriteAllText(SaveRsultDir+System.IO.Path.GetFileName(SaveDir) +".csv", sb.ToString());
+            }
+        }
+
+        public Image<Rgba32> DrawBox(string im_file, int x, int y, int w, int h, string label_anme = "", int id = 0)
+        {
+            var font = new SixLabors.Fonts.Font(new FontCollection().Add("C:/Windows/Fonts/consola.ttf"), 16);
+            SixLabors.ImageSharp.RectangleF rect = new SixLabors.ImageSharp.RectangleF((float)x, (float)y, (float)w, (float)h);
+            YoloLabel label = new YoloLabel(id, label_anme);
+            var image = SixLabors.ImageSharp.Image.Load<Rgba32>(im_file);
+            if (x<0||y<0)
+                return image;
+            YoloPrediction prediction = new YoloPrediction(label, 0, rect);
+
+            var (x0, y0) = (prediction.Rectangle.Left - 3, prediction.Rectangle.Top - 23);
+
+            image.Mutate(a => a.DrawPolygon(new SixLabors.ImageSharp.Drawing.Processing.Pen(prediction.Label.Color, 1),
+                new SixLabors.ImageSharp.PointF(prediction.Rectangle.Left, prediction.Rectangle.Top),
+                new SixLabors.ImageSharp.PointF(prediction.Rectangle.Right, prediction.Rectangle.Top),
+                new SixLabors.ImageSharp.PointF(prediction.Rectangle.Right, prediction.Rectangle.Bottom),
+                new SixLabors.ImageSharp.PointF(prediction.Rectangle.Left, prediction.Rectangle.Bottom)
+            ));
+
+            image.Mutate(a => a.DrawText($"{prediction.Label.Name} ",
+                font, prediction.Label.Color, new SixLabors.ImageSharp.PointF(x0, y0)));
+            return image;
+        }
+
+
+
+        public void RunYolo(string ImageDir, string model_file)
+        {
+
+            string Dir = ImageDir;
+            string SaveDir;
+            string SaveRsultDir;
+            int image_num;
+            StringBuilder sb = new StringBuilder();
+            if (!Directory.Exists(ImageDir))
+            {
+                AppendMsg("目录不存在" + Environment.NewLine);
+                return;
+            }
+
+            AppendMsg("------------------------------------------------" + Environment.NewLine);
+            DirectoryInfo directoryInfo = new DirectoryInfo(Dir);
+            FileInfo[] files = directoryInfo.GetFiles();
+            CreateOutputFolder(OUTPUT_FOLDER);
+
+
+            if (files.Length>0)
+            {
+                var scorer = new YoloScorer<YoloCocoP5Model>(model_file);
+
+                var font = new SixLabors.Fonts.Font(new FontCollection().Add("C:/Windows/Fonts/consola.ttf"), 16);
+                SaveRsultDir = OUTPUT_FOLDER +"\\"+ System.IO.Path.GetFileNameWithoutExtension(model_file);
+                SaveDir = OUTPUT_FOLDER +"\\"+ System.IO.Path.GetFileNameWithoutExtension(model_file)+"\\"+ System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(files[0].FullName));
+                CreateOutputFolder(SaveRsultDir);
+                CreateOutputFolder(SaveDir);
+                WilfFile.DelFile(SaveDir, "*");
+                sb.Append("file_name,"+"label_name,"+"id,"+"score,"+"x,"+"y,"+"w,"+"h,"+Environment.NewLine);
+                image_num =(int)(files.Length*(test_num_ratio/100.0));
+                image_num = Math.Min(max_num, image_num);
+                for (int i = 0; i<image_num; i++)
+                {
+                    double ratio = (double)(i*100)/files.Length;
+                    AppendLine(System.IO.Path.GetFileName(ImageDir) +" ratio:"+ratio.ToString("F2")+"% "+i+"/"+files.Length+")");
+                    var image = SixLabors.ImageSharp.Image.Load<Rgba32>(files[i].FullName);
+                    var predictions = scorer.Predict(image);
+                    foreach (var prediction in predictions) // draw predictions
+                    {
+                        var score = Math.Round(prediction.Score, 2);
+
+                        var (x, y) = (prediction.Rectangle.Left - 3, prediction.Rectangle.Top - 23);
+
+                        image.Mutate(a => a.DrawPolygon(new SixLabors.ImageSharp.Drawing.Processing.Pen(prediction.Label.Color, 1),
+                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Left, prediction.Rectangle.Top),
+                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Right, prediction.Rectangle.Top),
+                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Right, prediction.Rectangle.Bottom),
+                            new SixLabors.ImageSharp.PointF(prediction.Rectangle.Left, prediction.Rectangle.Bottom)
+                        ));
+
+                        image.Mutate(a => a.DrawText($"{prediction.Label.Name} ({score})",
+                            font, prediction.Label.Color, new SixLabors.ImageSharp.PointF(x, y)));
+
+                        sb.Append(System.IO.Path.GetFileName(files[i].FullName)+",");
+                        sb.Append(prediction.Label.Name+","+prediction.Label.Id+",");
+                        sb.Append(prediction.Score +","+prediction.Rectangle.X+","+prediction.Rectangle.Y+","+prediction.Rectangle.Width+","+prediction.Rectangle.Height+Environment.NewLine);
+
+                    }
+                    image.Save(SaveDir + "\\" + System.IO.Path.GetFileName(files[i].FullName));
+                    if (m_thread_test == null)
+                        break;
+                }
+                File.WriteAllText(SaveRsultDir+System.IO.Path.GetFileName(SaveDir) +".csv", sb.ToString());
             }
         }
         public void CreateOutputFolder(string outputFolder)
@@ -157,7 +214,7 @@ namespace Yolov5App
 
         public string GetTestModelVx()
         {
-            
+
             if (Directory.Exists(BASE_MODELS_Alpsentek))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(BASE_MODELS_Alpsentek);
@@ -176,6 +233,7 @@ namespace Yolov5App
             ModelEnableAlpsentek = AlpentekCB.Checked;
             ModelEnableV5 = YoloCB.Checked;
             SubModeEnable = SubModeCB.Checked;
+            max_num = Convert.ToInt32(MaxNumBox.Text);
             test_num_ratio = Convert.ToDouble(TestRatioBox.Text);
 
             if (m_thread_test == null)
@@ -210,6 +268,11 @@ namespace Yolov5App
                 AppendMsg("************************************************" + Environment.NewLine);
                 AppendMsg("Alpsentek:" + Environment.NewLine);
                 model_file = GetTestModelVx();
+                if (!File.Exists(model_file))
+                {
+                    AppendLine("未找到模型文件");
+                    return;
+                }
                 for (int i = 0; i < dir.Length; i++)
                 {
                     AppendMsg("global ratio:"+i+"/"+dir.Length + Environment.NewLine);
@@ -222,6 +285,11 @@ namespace Yolov5App
                 AppendMsg("************************************************" + Environment.NewLine);
                 AppendMsg("Yolo:" + Environment.NewLine);
                 model_file = BASE_MODELS+"\\yolov5s.onnx";
+                if (!File.Exists(model_file))
+                {
+                    AppendLine("未找到模型文件");
+                    return;
+                }
                 for (int i = 0; i < dir.Length; i++)
                 {
                     AppendMsg("global ratio:"+i+"/"+dir.Length + Environment.NewLine);
@@ -230,19 +298,20 @@ namespace Yolov5App
                 AppendMsg("===============================================" + Environment.NewLine);
             }
 
-           
-           
+
+
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe",Application.StartupPath);
+            System.Diagnostics.Process.Start("explorer.exe", Application.StartupPath);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             dataUI = new DataUI(this);
             dataUI.LoadData();
+            WilfFile.CreateDirectory(DocDir);
         }
 
         //public void AppendMsgColor(string Msg, Color color)
@@ -325,6 +394,71 @@ namespace Yolov5App
                     //WilfFile.WriteAppend(log_file, Msg);
                 }
             }
+        }
+
+        private void dToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string file = WilfFile.OpenFile(".jpg");
+            Image<Rgba32> im = DrawBox(file, 100, 50, 10, 10, "wwf", 1);
+            im.Save("123.jpg");
+        }
+
+
+        private void drawPointUAV123ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string[] file_list;
+            string[] dir = new string[] { ((string)InPath.Text) };
+            string anno_base_dir = CfgBox.Text;
+            string anno_file;
+            string BaseDir = Application.StartupPath+ "DrawPicture";
+            string SaveDir;
+            Image<Rgba32> im;
+            SubModeEnable = SubModeCB.Checked;
+            if (SubModeEnable == true)
+                dir = WilfFile.GetDir(InPath.Text, false);
+            if (!Directory.Exists(anno_base_dir))
+            {
+                AppendMsg("未找到anno路径"+Environment.NewLine);
+                return;
+            }
+            WilfFile.CreateDirectory(BaseDir);
+            for (int i = 0; i < dir.Length; i++)
+            {
+                file_list = WilfFile.GetFile(dir[i], ".jpg", false);
+                anno_file = anno_base_dir + "\\" + System.IO.Path.GetFileName(dir[i])+".txt";
+                if (file_list.Length>0)
+                {
+                    SaveDir = BaseDir+"\\"+System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(file_list[0]));
+                    WilfFile.CreateDirectory(SaveDir);
+                    if (!File.Exists(anno_file))
+                    {
+                        AppendMsg("[Error] anno file :"+anno_file+Environment.NewLine);
+                        continue;
+                    }
+                    List<int[]> corr_xy = WilfDataPro.GetIntDataFromFile(anno_file);
+                    for (int j = 0; j < file_list.Length; j++)
+                    {
+                        im = DrawBox(file_list[j], corr_xy[j][0], corr_xy[j][1], corr_xy[j][2], corr_xy[j][3]);
+                        im.Save(SaveDir + "\\" + System.IO.Path.GetFileName(file_list[j]));
+                        AppendLine(System.IO.Path.GetFileName(dir[i]) +":"+ j+"/"+file_list.Length+" "+i+"/"+dir.Length);
+                    }
+                }
+
+            }
+        }
+
+        private void openYoloTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", OUTPUT_FOLDER);
+        }
+
+        private void uAVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UAV123 uAV123 = new UAV123();
+            uAV123.GetResult("F:\\Alpsenteck-git\\TestResult");
+            uAV123.GetAnno(CfgBox.Text);
+           
+            
         }
     }
 
