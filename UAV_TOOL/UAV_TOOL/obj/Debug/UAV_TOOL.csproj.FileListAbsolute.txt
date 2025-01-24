@@ -1,0 +1,10 @@
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\bin\Debug\UAV_TOOL.exe.config
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\bin\Debug\UAV_TOOL.exe
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\bin\Debug\UAV_TOOL.pdb
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.csproj.AssemblyReference.cache
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.MainForm.resources
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.Properties.Resources.resources
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.csproj.GenerateResource.cache
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.csproj.CoreCompileInputs.cache
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.exe
+F:\Alpsenteck-git\UAV_TOOL\UAV_TOOL\obj\Debug\UAV_TOOL.pdb
